@@ -1,0 +1,31 @@
+<h2>Escorts on the System</h2>
+<{if $pagenav}><div style="clear:both; float:right;"><{$pagenav}></div><{/if}>
+<table width="100%">
+<tr class="head">
+	<td>Alias</td>
+	<td>Name</td>
+	<td>Age</td>
+	<td>Sex</td>
+	<td>SMS</td>        
+	<td>Mobile</td>
+    <td>Landline</td>
+    <td>Actions</td>
+</tr>
+<{foreach from=$escorts item=escort}>
+<tr class="<{cycle value='odd,even'}>">
+	<td><a href="<{$xoops_url}>/modules/escorts/?pid=<{$escort.pid}>"><{$escort.alias}></a></td>
+	<td><a href="<{$xoops_url}>/modules/escorts/?pid=<{$escort.pid}>"><{$escort.name}></a></td>
+	<td><a href="<{$xoops_url}>/modules/escorts/?pid=<{$escort.pid}>"><{$escort.age}></a></td>
+	<td><a href="<{$xoops_url}>/modules/escorts/?pid=<{$escort.pid}>"><{$escort.sex}></a></td>        
+	<td><a href="<{$xoops_url}>/modules/escorts/?pid=<{$escort.pid}>"><{$escort.sms}></a></td>
+    <td><a href="<{$xoops_url}>/modules/escorts/?pid=<{$escort.pid}>"><{$escort.mobile}></a></td>
+    <td><a href="<{$xoops_url}>/modules/escorts/?pid=<{$escort.pid}>"><{$escort.landline}></a></td>    
+   	<td><a href="<{$xoops_url}>/modules/escorts/admin/admin.php?op=pictures&pid=<{$escort.pid}>">Edit Pictures</a>
+    	&nbsp;|&nbsp;
+    	<a href="<{$xoops_url}>/modules/escorts/admin/admin.php?op=prices&pid=<{$escort.pid}>">Edit Prices</a>
+    	&nbsp;|&nbsp;
+    	<a href="<{$xoops_url}>/modules/escorts/admin/admin.php?op=profile&pid=<{$escort.pid}>">Edit Profile</a>
+    </td>
+</tr>
+<{/foreach}>
+</table>
